@@ -25,4 +25,6 @@ function createLove(event) {
 document.addEventListener('mousemove', createLove);
 document.addEventListener('touchmove', createLove);
 
-  
+document.addEventListener('mousemove', createLove);
+document.addEventListener('touchmove', createLove);
+document.addEventListener('touchmove', preventScroll, { passive: false });
