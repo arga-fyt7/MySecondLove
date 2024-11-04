@@ -20,11 +20,13 @@ function createLove(event) {
     love.remove();
   }, 2000);
 }
+// Fungsi untuk mencegah scroll saat animasi berlangsung
+function preventScroll(event) {
+  event.preventDefault();
+}
 
-// Tambahkan event listener untuk mousemove dan touchmove
-document.addEventListener('mousemove', createLove);
-document.addEventListener('touchmove', createLove);
-
-document.addEventListener('mousemove', createLove);
-document.addEventListener('touchmove', createLove);
-document.addEventListener('touchmove', preventScroll, { passive: false });
+// Menambahkan event listener
+document.addEventListener('mousemove', createLove);         // Desktop
+document.addEventListener('touchstart', createLove);        // Sentuhan awal pada layar
+document.addEventListener('touchmove', createLove);         // Gerakan sentuhan
+document.addEventListener('touchmove', preventScroll, { passive: false }); // Mencegah scroll saat animasi
