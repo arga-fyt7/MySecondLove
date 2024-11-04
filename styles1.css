@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    position: absolute;
+    top: 20px;
+    color: #333;
+  }
+  
+  .love {
+    position: absolute;
+    font-size: 2rem;
+    color: #ff69b4;
+    pointer-events: none;
+    animation: fadeOut 2s ease forwards;
+    mix-blend-mode: screen;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.5);
+    }
+  }
+  
